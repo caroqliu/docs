@@ -3,6 +3,9 @@
 preview: a4a
 adSlot: /30497360/amp_by_example/AMP_Banner_300x250
 skipValidation: 'true'
+width: 300
+height: 250
+layout: responsive
 
 --->
 
@@ -37,7 +40,7 @@ skipValidation: 'true'
   The anatonomy of banner ad is an image with a hyperlink to the advertiser's page. We display the image for the creative using [amp-img](/documentation/components/reference/amp-img.html).
   -->
   <a target="_blank"
-     href="<% hosts.platform %>/amp_ads/banner_ad/">
+     href="<% canonical %>">
     <amp-img src="/static/samples/img/amp-300x250.jpg"
               width="300"
               height="250"
@@ -45,9 +48,9 @@ skipValidation: 'true'
   </a>
 
   <!--
-   We include a tracking pixel to record that the ad was rendered using [amp-pixel](https://www.ampproject.org/docs/reference/components/amp-pixel).
+   We include a tracking pixel to record that the ad was rendered using [amp-pixel](/documentation/components/reference/amp-pixel.html).
 
-  <p>Alternatively one could make use of [amp-analytics](https://www.ampproject.org/docs/reference/extended/amp-analytics.html) to enable much more comprenhensive measure activity.</p>
+  Alternatively one could make use of [amp-analytics](/documentation/components/reference/amp-analytics.html) to enable much more comprenhensive measure activity.
    -->
    <amp-pixel src="https://foo.com/pixel?RANDOM"></amp-pixel>
 </body>

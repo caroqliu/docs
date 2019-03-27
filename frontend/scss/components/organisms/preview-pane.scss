@@ -81,4 +81,13 @@
   &-mail-header {
     width: 100%;
   }
+
+  &-ads {
+    flex-direction: row;
+    align-items: center;
+
+    amp-iframe {
+      flex: 1 0 auto;
+    }
+  }
 }
