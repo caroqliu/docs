@@ -46,13 +46,13 @@ description: Coming soon - analyze and learn how to optimize your AMP pages for 
     {% do doc.icons.useIcon('icons/vitals-header.svg') %}
   </section>
 
-  {% if podspec.env.name == 'production' %}
-    <section class="ap-t-pixi-intro ap-t-pixi-coming-soon">
-      <p class="ap-t-pixi-intro-text">
-        Coming soon! Read more about how AMP helps achieve a great page experience
-        in our <a href="https://blog.amp.dev/2020/05/28/amp-page-experience/">blog post</a>.
-      </p>
-      <br>
+  {% if podspec.env.name != 'production' %}
+  <section class="ap-t-pixi-intro ap-t-pixi-coming-soon">
+    <p class="ap-t-pixi-intro-text">
+      Coming soon! Read more about how AMP helps achieve a great page experience
+      in our <a href="https://blog.amp.dev/2020/05/28/amp-page-experience/">blog post</a>.
+    </p>
+    <br>
       <div class="ap-t-pixi-ctas">
         <a href="https://web.dev/vitals/" class="ap-m-lnk ap-m-lnk-square" target="_blank" rel="noopener">
           <div class="ap-a-ico ap-m-lnk-icon">
@@ -113,7 +113,7 @@ description: Coming soon - analyze and learn how to optimize your AMP pages for 
         layout="container"
         sandbox="allow-forms" {% if podspec.env.name == 'development' %}data-ampdevmode{% endif %}>
 
-      <div class="ap-t-pixi-checks-input">
+      <div class="ap-t-pixi-checks-intro">
         {% include 'views/partials/pixi/input-bar.j2' %}
         {% include 'views/partials/pixi/status-intro.j2' %}
       </div>
