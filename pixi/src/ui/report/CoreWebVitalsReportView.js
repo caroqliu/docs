@@ -109,6 +109,12 @@ class CoreWebVitalView {
     this.recommendations = this.container.querySelector(
       '.ap-m-pixi-primary-metric-recommendations'
     );
+    this.tooltip = this.container.querySelector('.ap-m-tooltip-tip');
+    this.tooltip.addEventListener('keydown', (e) => {
+      if (e.keyCode === 9) {
+        e.preventDefault();
+      }
+    });
     this.defaultHref = this.recommendations.getAttribute('href');
     this.recommendations.removeAttribute('href');
   }
