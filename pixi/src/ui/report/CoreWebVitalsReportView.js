@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import i18n from '../I18n.js';
+import Tooltip from '../Tooltip';
 
 const CATEGORIES = {
   fast: 'fast',
@@ -109,6 +110,7 @@ class CoreWebVitalView {
     this.recommendations = this.container.querySelector(
       '.ap-m-pixi-primary-metric-recommendations'
     );
+    this.tooltip = new Tooltip(container);
     this.defaultHref = this.recommendations.getAttribute('href');
     this.recommendations.removeAttribute('href');
   }
